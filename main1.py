@@ -410,3 +410,93 @@ print({f"k:{x}": x*2 for x in range(3)})
 # o = frozenset([1,2,3,4])
 # print('o.__doc__)
 
+'''
+    Object Oriented Programming : This is a Programming Paradign, that focuses more on object.
+    It is used to Avoid code repetition.
+    
+    Class : A class is a blue print, that contains all the Attributes and methods of an object.
+    Object: this is an instantiated class.
+    attribute : this is a characteristic of the class/object. It is a variable inside a class. it can be made private.
+    method: this is a function created inside a class. it can be made private.
+    
+    When we inherit from a base class or derived class, we simply have the namespace of the inherited class,
+    or we simply have all the attributes/methods available in this derived class.
+    
+    Encapsulation is acheived by using __. : encapsulation is the hiding or restiction of data.
+    when the __ is prefixed before an attr or a method, it becomes a private entity.
+    
+    You can access privated attributes only inside of the class (method).
+    
+    You access 'class attribute' with the class name being the prefix and object name as the prefix, 
+    e.g Class.attr. and obj.attr.
+    You acess object attr. with the object name being the prefix. e.g obj.obj_attr.
+    Object attr. are defined inside the constructor.
+    class attr. are defined inside the class itself.
+    __ is used to make attr. private, and private attributes can't be accessed outside the scope of the class.
+    it can only be accessed inside.
+'''
+from functools import reduce
+
+class Polygon:
+    n = 'sa'
+    def __init__(self, sides):
+        self.__n = 'ss'
+        self.__f = 'sas'
+        self.__f = 'sasasssa'
+        self.error = "Give a list of more than 3 items"
+        self.__more = list(range(3, 2000))
+        self.sidess = 3 or _more
+        if len(list(sides)) >= 3:
+            self.no_sides = len(sides)
+            self.sides = list(sides)
+        else:
+            print("{}".format(self.error))
+
+    def __sum_sides(self):
+        summ = reduce(lambda x, y: x+y, self.sides)
+        print(summ, 'ss')
+
+    def sides_count(self):
+        '''
+        This returns the number os sides in this instance
+        '''
+        return self.no_sides
+
+    def get_sides(self, index):
+        return self.sides[index]
+
+    def mo(self):
+        return self.__more
+
+    def me(self):
+        return 'I am a Triangle, i have {} sides'.format(self.no_sides)
+
+    def __sas(self):
+        print('private')
+
+    def private(self):
+        print(self.__f)
+
+poly = Polygon([2, 3, 4])
+print(poly.private())
+
+
+
+# class Quad(Polygon):
+#     def __init__(self, **kwargs):
+#         super().__init__(kwargs['sides'])
+#         print(kwargs['sides'])
+#
+#
+#     def me(self):
+#         print(super().me())
+#         return 'i am a Quad'
+#
+#     def __sas(self):
+#         print('public')
+# #
+#
+# print(dir(Quad))
+#
+#
+# print(isinstance(f, object))
