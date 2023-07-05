@@ -1,4 +1,4 @@
-# Python_notes
+# Python Notes
 Learn Python Programming Language from Basics to Advance.
 
 ```        
@@ -11,9 +11,7 @@ Note: This list should be learnt in this Order.
 
 Python is a high-level, interpreted programming language that was created by Guido van Rossum and first released in 1991. It is known for its simplicity and readability, which makes it an excellent choice for beginners and experienced programmers alike. Python emphasizes code readability by using indentation and a clean syntax, which reduces the need for complex braces and semicolons.
 
-## what can python do ?
-
-## Why python ?
+## Why python, What can python do ? 
 Python is a versatile programming language that can be used for a wide range of applications. Here are some of the things Python can do:
 
 - Web Development
