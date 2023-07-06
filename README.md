@@ -417,7 +417,87 @@ Syntax:
 ```
 
 
+## Python List Unpacking (sequence unpacking):
+Basically, you can assign elements of a list (and also a tuple) to multiple variables. For example:
+```Python
+    colors = ['red', 'blue', 'green']
+    red, blue, green = colors
+```
+This statement assigns the first, second, and third elements of the colors list to the red, blue, and green variables.
 
+__An error occurs when the number of variable is less than the element in the sequence on the right hand side__
+```Python
+    colors = ['red', 'blue', 'green']
+    red, blue = colors
+```
+Error:
+```Python 
+    ValueError: too many values to unpack (expected 2)
+```
+
+
+
+## Unpacking and packing:
+If you want to unpack the first few elements of a list and don’t care about the other elements, you can:
+
+- First, unpack the needed elements to variables.
+- Second, pack the leftover elements into a new list and assign it to another variable.
+By putting the asterisk (*) in front of a variable name, you’ll pack the leftover elements into a list and assign them to a variable. For example:
+
+```Python
+   colors = ['red', 'blue', 'green']
+    red, blue, *other = colors
+
+    print(red, blue, other)
+
+    # Result: red blue ['green']
+```
+
+## List Comprehension
+```Python
+    colors = ['red', 'blue', 'green']
+    red = [item for item in colors if item == "red"]
+
+    print(red)
+    # Result: ['red']
+```
+
+## map(), filter(), reduce()
+- map(function, iterable): This is used to perform a function on every item of an iterable passed to it, it/to return a new iterator object An object that has the ''''__next__()''' method. Works on all python iterable. 
+
+```Python 
+   container = [2, 3, 4]
+   calculation_response = map(lambda x: x**2, container)
+   # The above statement yeilds an iterator object"<map object at 0x10bf88670>".
+
+   # Convert the iterator to a list
+   print(list(calculation_response)) => # [4, 9, 16]
+```
+
+
+- filter(function, iterable) built-in function -> Use the Python filter(fn, iterable) function to filter an Iterable. The  function "fn()" is ran on every element on the iterable and returns 'True' where any element meets the condition. A new iterator object is returned after using filter object.
+
+```Python 
+   container = [2, 3, 4]
+   calculation_response = filter(lambda x: x**2 == 16, container)
+   # The above statement yeilds an iterator object "<filter object at 0x10bf88670>".
+
+   # Convert the iterator to a list
+   print(list(calculation_response)) => # [4]
+```
+
+- reduce(function, iterable): This is not a built-in function instead it is import from the standard python library. It is used to reduce an iterable to a single value. Example: 
+
+```Python
+    from functools import reduce 
+
+    container = [1, 2, 4, 3]
+    summer = reduce(lambda x, y: x + y, container)
+    # 1 + 2 = 3,
+    # 3 + 4 = 7, 
+    # 7 + 3 = 10.
+    print(summer) # => 10
+```
 
 
 
