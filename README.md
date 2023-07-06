@@ -436,7 +436,6 @@ Error:
 ```
 
 
-
 ## Unpacking and packing:
 If you want to unpack the first few elements of a list and don’t care about the other elements, you can:
 
@@ -463,6 +462,7 @@ By putting the asterisk (*) in front of a variable name, you’ll pack the lefto
 ```
 
 ## map(), filter(), reduce()
+The map(), filter() and reduce can be used on any Iterable object.
 - map(function, iterable): This is used to perform a function on every item of an iterable passed to it, it/to return a new iterator object An object that has the ''''__next__()''' method. Works on all python iterable. 
 
 ```Python 
@@ -499,6 +499,55 @@ By putting the asterisk (*) in front of a variable name, you’ll pack the lefto
     print(summer) # => 10
 ```
 
+# Tuple Data Structure.
+ a tuple is an ordered, immutable collection of elements enclosed in parentheses ().
+
+Creating a Tuple:
+To create a tuple, you can enclose elements within parentheses () and separate them with commas. Alternatively, you can create a tuple without using parentheses by simply separating the elements with commas.
+
+```Python
+    # Method 1
+    my_tuple = (1, 2, 3)
+    
+    # Method 2
+    my_tuple = 1, 2, 3
+
+```
+
+## Accessing Tuple
+
+```Python
+    print(my_tuple[0])     # Output: 1
+    print(my_tuple[2])     # Output: 3
+```
+
+## Tuple Unpacking
+
+```Python
+    my_tuple = 1, 2, 3  # Tuple packing: Packing all values to 1 variable name.
+    a, b, c = my_tuple  # Tuple unpacking: Spreading values to different variable names.
+    print(a, b, c)     # Output: 1 2 3
+```
+
+## Tuple Operations
+- Concatenation (+): Adding 2 or more tuples together.
+```Python
+    (1,2,3) + (4, 5, 6) # => (1, 2, 3, 4, 5, 6)
+```
+- Repetition (*):
+
+
+## Tuple Methods:
+Tuples have a few built-in methods available:
+
+- count(): Returns the number of occurrences of a specified element in the tuple.
+- index(): Returns the index of the first occurrence of a specified element in the tuple.
+
+
+# Dictionary Data Structure
+
+
+# Set Data Structure
 
 
 
