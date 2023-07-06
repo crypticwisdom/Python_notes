@@ -358,9 +358,52 @@ Syntax:
 - index(): Returns the index of the first occurrence of a specified element.
 - count(): Returns the number of occurrences of a specified element in the list.
 - sort(): Sorts the elements of the list in ascending order.-
-reverse(): Reverses the order of the elements in the list.
-copy(): Returns a shallow copy of the list.
-clear(): Removes all elements from the list.
+- reverse(): Reverses the order of the elements in the list. a[::-1]
+- copy(): Returns a shallow copy of the list.
+- clear(): Removes all elements from the list.
+
+To see a complete list of methods available for a any Python object, you can use the dir() function or access the Python documentation. 
+
+### Sort a list in Place:
+The list.sort() method sorts the original list in place. It means that the sort() method modifies the order of elements in the list.
+
+```Python
+    data_set = [2, 3, 5, 4, 1]
+    data_set.list()
+    print(data_set) => [1, 2, 3, 4, 5]
+
+    data_set2 = [2, 4, 3, 1]
+    data_set2.list(reverse=True)
+    print(data_set2) => [4, 3, 2, 1]
+
+```
+
+- By default, the sort() method sorts the elements of a list using the less-than operator (<). In other words, it places the lower elements before the higher ones.
+- If a list contains strings, the sort() method sorts the string elements alphabetically.
+```Python
+
+    guests = ['James', 'Mary', 'John', 'Patricia', 'Robert', 'Jennifer']
+    guests.sort(reverse=True)
+    print(guests) => ['James', 'Jennifer', 'John', 'Mary', 'Patricia', 'Robert']
+
+```
+
+```Python
+    # Sort the companies revenue from smallest to the highest
+    companies = [('Google', 2019, 134.81),
+             ('Apple', 2019, 260.2),
+             ('Facebook', 2019, 70.7)]
+    
+
+    companies.sort(key=lambda container: container[2])
+    print(companies) => [('Apple', 2019, 260.2), ('Google', 2019, 134.81), ('Facebook', 2019, 70.7)]
+
+```
+
+## Python sorted() built-in function
+- The Python sorted() function is used to sort iterables.
+- This works same as the .sort() method, but the sorted() built-in function returns a new list object.
+- To return the new sorted list from the original list, you use the sorted() function.
 
 
 
@@ -373,6 +416,20 @@ clear(): Removes all elements from the list.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+# General Informations
 
 # Garbage Collection:
 When the del keyword is used to delete an object, the interpreter simply, unbinds the object from the variable or removes the variable name from the corresponding namespace. The object however continues to exist in memory and if no other variable name is bound to it, it is later automatically destroyed.
