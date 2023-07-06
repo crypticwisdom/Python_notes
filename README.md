@@ -7,7 +7,7 @@ Note: This list should be learnt in this Order.
 
 # Introduction to python. 
 
-## What is python ? 
+## What is python ?
 
 Python is a high-level, interpreted programming language that was created by Guido van Rossum and first released in 1991. It is known for its simplicity and readability, which makes it an excellent choice for beginners and experienced programmers alike. Python emphasizes code readability by using indentation and a clean syntax, which reduces the need for complex braces and semicolons.
 
@@ -41,6 +41,26 @@ Python syntax refers to the set of rules and conventions that define the structu
 - Single Line Comment. #
 - Multi-Line Comment. """ ... """
 
+# Keywords
+Python keywords, also known as reserved words, are words that have special meaning and predefined functionality in the Python language. These keywords cannot be used as identifiers (e.g., variable names or function names) because they are reserved for specific purposes within the language.
+
+[False, class,  finally, is, return, None, continue, for, lambda, try, True, def, from, nonlocal, while, and, del, global, not, with
+as, elif, if, or, yield, assert, else, import, pass, break, except, in, raise]
+
+# Built-In Functions
+Python provides a set of built-in functions that are available by default without the need for importing any modules. These functions cover a wide range of functionalities and are an integral part of the Python language. Here are some commonly used built-in functions in Python:
+
+- Print: print() is used to output text or variables to the console.
+
+- Type: type() is used to determine the type of an object.
+
+- Len: len() returns the length or the number of elements in an object, such as a string, list, or tuple.
+
+- Range: range() generates a sequence of numbers within a specified range.
+
+- Input: input() is used to read user input from the console.
+
+
 # Variable
 Variable is used to store data to computer memory.
 
@@ -53,14 +73,12 @@ variable_name = "Variable Value"
 Data types are the different categories in which data can be stored, handle and manipulated in python. These data types are objects.
 
 - String(str)
-- Integer(int): whole numbers without precisions. E.g 1, -1, -344, 122322.
-
+- Integer(int)
 - Boolean(bool): Either True or False.
 
 - Float Point(float): Numbers with precisions. E.g 0.122, -2901.23.
 
 - Complex Number(complex): Imaginary numbers. E.g: (89 + 9j).
-
 
 
 # Basic Data Structures
@@ -124,6 +142,29 @@ Example: integer to float.
   
   - Chained conditions, also known as compound conditions or multiple conditions, refer to using multiple conditions together to create more complex logic in programming. This uses 'and' or 'or' logical operators.
 
+## Operator Precedence: 
+Operator precedence in Python defines the order in which operators are evaluated when multiple operators are present in a single expression.
+Parentheses: Expressions enclosed in parentheses ( ) have the highest precedence. They are evaluated first, and the result is used in further calculations.
+
+- Exponentiation: The exponentiation operator ** has the next highest precedence. It is used to raise a number to a power.
+
+- Unary Operators: Unary operators like positive + and negative - sign have the next highest precedence. They are applied to a single operand.
+
+- Multiplication, Division, and Modulo: Multiplication *, division /, and modulo % operators have the same precedence and are evaluated from left to right.
+
+- Addition and Subtraction: Addition + and subtraction - operators have the same precedence and are evaluated from left to right.
+
+- Bitwise Shifts: Bitwise shift operators << and >> have the same precedence and are evaluated from left to right.
+
+- Bitwise AND, OR, XOR: Bitwise AND &, OR |, and XOR ^ operators have the same precedence and are evaluated from left to right.
+
+- Comparison Operators: Comparison operators like <, >, <=, >=, ==, and != have the same precedence and are evaluated from left to right.
+
+- Boolean Operators: Boolean operators and, or, and not have the lowest precedence among the logical operators.
+
+It's important to note that within an expression, operators with higher precedence are evaluated before operators with lower precedence. If operators have the same precedence, their evaluation order is determined by their position from left to right.
+
+
 # String Data Type
 Sequence of characters stored within a single, double or triple quotes. E.g: 
 ```Python
@@ -132,18 +173,208 @@ Sequence of characters stored within a single, double or triple quotes. E.g:
 """ Python Programmer."""
 ```
 
+
 ## String Methods
-- 
+String Methods are used to perform extram action on a string.
+
+- .lower() -> "String".lower() => 'string".
+- .upper()
+- .capitalize()
+...
+
 
 # Integer Data Type
+- Whole numbers without precisions. E.g 1, -1, -344, 122322.
+
+## Integer Methods
 - 
+
 
 # Float Data Type
-- 
+Numbers with precisions. E.g 0.122, -2901.23.
+
 
 # Boolean Data Type
-- 
+Either True or False.
+
 
 # Complex Data Type
-- 
+Imaginary numbers. E.g: (9j + 6).
 
+
+# Control Flow
+Control flow in Python refers to the order in which statements are executed in a program. It determines the flow or sequence of execution based on conditions and loops. Control flow allows you to control the path of execution and make decisions in your program based on certain criteria.
+
+Python provides several control flow structures that enable you to control the execution of statements:
+
+- Conditional Statements (if, elif, else):
+```Python
+    # Note: Only the block that meets the condition will run.
+    if condition1:
+        # code block executed if condition1 is true
+    elif condition2:
+        # code block executed if condition2 is true
+    else:
+        # code block executed if neither condition1 nor condition2 is true
+
+```
+- Tenary (Short hand if statement): 
+```Python
+variable = 'Statement to run if the condition is True' if  condition else 'Statement to run if condition is false'
+```
+
+- Loops (for, while): Loops allow you to repeatedly execute a block of code.
+
+Structure of for and while loops:
+```Python
+    for item in iterable:
+        # code block executed for each item in the iterable
+
+    while condition:
+        # code block executed as long as the condition is true
+```
+
+- Break and Continue: The 'break' statement is used to exit a loop prematurely, stopping the loop's execution. The 'continue' statement is used to skip the rest of the loop's code for the current iteration and move to the next iteration.
+
+- Exception Handling (try, except, else, finally): Exception handling allows you to handle errors or exceptions that may occur during the execution of your program. The 'try' block contains the code that might raise an exception, and the 'except' block handles the exception if it occurs. The 'finally' block is used to specify code that should always be executed, whether an exception occurs or not.
+
+```Python
+    try:
+    # code that might raise an exception
+    except ExceptionType:
+        # code executed if the specified exception occurs
+    else:
+        # code to be executed if there was no exception but if there was an error, this block won't run.
+    finally:
+        # code executed regardless of whether an exception occurs or not
+```
+
+
+# Iterable and Iterator
+Iterables is an object that can be looped over.
+- list
+- tuple
+- dictionary
+- set
+- files
+- generators
+
+Any object with __iter__() method, means that object can be looped over / is an      iterable.
+
+- Iterator: is an object with a state so that it remembers where it is during iteration, they know how to get their next value with the __next__() which is one of the magic methods of an Iterator | next() which is a built-in function that calls the '__next__()' method.
+
+- iter(iterable) -> returns an iterator object which we can then use the 'next()' to get the next element in the sequence, and once each element has been accessed, it is then lost or removed from the state. When the iterator is exhausted i.e when we have accessed all of it's element, and we try to access an element again from it, a 'StopIteration' Exception will be thrown
+
+## Loops
+for i in range(x):
+    print(i)
+    if i == 3:
+        break 
+    else:
+        continue
+
+
+counter = 0
+while counter == 90:
+    if counter == 34:
+        break
+    else:
+        continue
+
+
+# Functions and Lambda (Anonymous Function):
+A function is used to group a block of code.
+
+Syntax:
+```Python
+    # Function definition
+    def function_name(parameter1, parameter2, *args, **kwargs):
+        # Block of code to run.
+        
+        # *args is used to hold values in a tuple.
+
+        # kwargs is used to hold key-value pairs
+
+        return value_to_return 
+
+
+    # Function invokation
+    function_name(argument1m argument2)
+```
+
+## Lambda Function (Anonymous Function)
+- Lambda functions are functions without name and are written with the 'lambda' keyword.
+
+Syntax:
+```Python
+    # Lambda function definition
+    func = lambda parameter1, parameter2: parameter1 * parameter2
+
+    # Invokation
+    func(parameter1, parameter2)
+```
+
+# Python List
+ a list is a versatile and commonly used data structure that allows you to store and manipulate a collection of items. Lists are mutable, meaning you can add, remove, or modify elements within them. 
+
+- Create a List:
+ ```Python
+    container1, container2 = [1,2], list(1,2)
+ ```
+
+- Accessing List Elements:
+```Python
+    print(container1[0]) => 1
+```
+
+- Modifying List Elements:
+```Python
+    container1[1] = 332
+```
+
+- List Operations:
+  - Concatenation (+): Adding 2 or more list objects together.
+    ```Python 
+       a, b = [2,4,5], [43,65]
+       print(a + b) => [2,4,5,43,65]
+    ```
+  - Repition (*): Repeat a list a certain number of times.
+    ```Python 
+       a = [2,4,5]
+       print(a * 3) => [2, 4, 5, 2, 4, 5, 2, 4, 5]
+    ```
+  - Slicing (:): Use slicing to extract a portion of a list. It allows you to specify a range of indices to retrieve a sublist.
+    ```Python 
+       a = [2, 4, 5, 3]
+       print(a[:2]) => [2, 4, 5]
+    ```
+
+## List Methods:
+- append(): Adds an element to the end of the list.
+- extend(): Appends elements from an iterable to the end of the list.
+- insert(): Inserts an element at a specific index.
+- remove(): Removes the first occurrence of a specified element.
+- pop(): Removes and returns the element at a specific index, or the last element if no index is specified.
+- index(): Returns the index of the first occurrence of a specified element.
+- count(): Returns the number of occurrences of a specified element in the list.
+- sort(): Sorts the elements of the list in ascending order.-
+reverse(): Reverses the order of the elements in the list.
+copy(): Returns a shallow copy of the list.
+clear(): Removes all elements from the list.
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Garbage Collection:
+When the del keyword is used to delete an object, the interpreter simply, unbinds the object from the variable or removes the variable name from the corresponding namespace. The object however continues to exist in memory and if no other variable name is bound to it, it is later automatically destroyed.
+This automatic destruction of unreferenced objects in python is called garbage collection.
+Garbage collection is the destruction of unreferenced objects in python.

@@ -87,7 +87,6 @@ if __name__ == '__main__':
     """
 # print('wisdom ', 7, sep="...", end='|')
 
-
 """
     import sys
     print(id(76))
