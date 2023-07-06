@@ -405,6 +405,17 @@ The list.sort() method sorts the original list in place. It means that the sort(
 - This works same as the .sort() method, but the sorted() built-in function returns a new list object.
 - To return the new sorted list from the original list, you use the sorted() function.
 
+## Python slicing:
+Lists support the slice notation that allows you to get a sublist from a list:
+
+Syntax:
+```Python
+    # list_[begin: end: step]
+
+    container = [21,45,76]
+    print(container[0: 1: 1]) # => [21, 45, 76]
+```
+
 
 
 
