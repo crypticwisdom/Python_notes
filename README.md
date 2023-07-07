@@ -633,6 +633,14 @@ In Python, a set is an unordered collection of unique elements. Sets are mutable
     print(numbers)  # Output: {1, 2, 3, 4, 5}
 ```
 
+## Set Comprehension
+```Python
+    tags = {'Django', 'Pandas', 'Numpy'}
+    lowercase_tags = {tag.lower() for tag in tags}
+
+    print(lowercase_tags)
+```
+
 ## Removing an Items
 ```Python
     fruits = {'apple', 'banana', 'orange'}
@@ -647,9 +655,57 @@ In Python, a set is an unordered collection of unique elements. Sets are mutable
 ```
 
 ## Set Operation
+### Set Union
+The union of two sets returns a new set that contains combination of the two sets but those element are unique.
+
+- Use union() method or set union operator (|) to union two or more sets.
+```Python
+    s1 = {'Python', 'Swift', 'Java'}
+    s2 = {'Dart', 'Javascript', 'Java'}
+    s3 = {'Golang', 'Rust', 'Haskell', 'R', 'C#'}
+
+    s = set1.union(s2, s3)
+    print(s) # Output: {'Python', 'Swift', 'Java', 'Dart', 'Javascript', 'Golang', 'Rust', 'Haskell', 'R', 'C#'}
+
+- The union() method accepts one or more iterables while the set union operator (|) only accepts sets.
+
+```Python
+    s1 = {'Python', 'Java'}
+    s2 = {'C#', 'Java'}
+    s3 = {'Golang', 'Swift', 'Python'}
+
+    s = s1 | s2 | s3
+
+    print(s)
+```
+
+### Advantage of the union() method over the (|) operator:
+- The union() method can take in other iterables and converts it to set. E.g: set1.union(set2)
+
+- The (|) operator only allows sets. E.g: set1 | set2 | set3.
+
+set1 | list1 # Output: TypeError
 
 
-# 
+## Set Intersection (&):
+- 
+
+## Set Differences (-):
+- 
+
+## Set Symmetric Difference symmetric_difference() method and the symmetric difference operator (^):
+- 
+
+## Set Subset
+- 
+
+## Set Superset:
+- 
+
+## Set Disjoint:
+- 
+
+## 
 
 
 
