@@ -120,8 +120,11 @@ Example: integer to float.
   - % -> It returns the remainder of a division.
 
 - Assignment Operator:
-  - (=, +=, -=, /=, //=, *=, **=, %=)
-
+  - (=, +=, -=, /=, //=, *=, **=, %=) New: (:= (Walrus Operator - used for assigning a value to a variable inside a statement))
+ ```Python
+    while (entered := input("Enter your name: ")) != "quit":
+        print(entered)
+ ```
 - Logical Operator:
   - (and, or)
 
@@ -543,13 +546,110 @@ Tuples have a few built-in methods available:
 - count(): Returns the number of occurrences of a specified element in the tuple.
 - index(): Returns the index of the first occurrence of a specified element in the tuple.
 
+## Tuple Comprehension
+
+```Python
+    my_tuple = (x for x in range(5))
+    print(type(my_tuple))    # Output: <class 'generator'>
+    print(tuple(my_tuple))   # Output: (0, 1, 2, 3, 4)
+
+    # ------------
+    even_tuple = tuple(x for x in range(10) if x % 2 == 0)
+    print(even_tuple)    # Output: (0, 2, 4, 6, 8)
+
+```
 
 # Dictionary Data Structure
+ A Python dictionary is a powerful data structure that allows you to store and retrieve data using key-value pairs.
 
+ ## Creating a Dictionary
+ container = {"name": "Wisdom"}
+
+
+ ## Accessing Dictionary Values
+print(container['name'])
+
+ ## Modifying Dictionary Values
+ container['name'] = "George"
+
+## Adding and Removing Key-Value Pairs:
+```Python
+    container['age'] = 23
+
+    # Remove
+    del container['age']
+```
+
+## Dictionary Methods
+- keys(): Returns a list of all the keys in the dictionary.
+- values(): Returns a list of all the values in the dictionary.
+- items(): Returns a list of key-value tuples representing all the items in the dictionary.
+- get(): Retrieves the value associated with a key, or a default value if the key is not found.
+- pop(): Removes and returns the value associated with a specified key.
+- update(): Updates a dictionary with key-value pairs from another dictionary or an iterable.
+- setdefault(): Retrieves the value associated with a given key, or inserts a default value if the key is not found.
+- popitem(): Removes and returns an arbitrary key-value pair from the dictionary.
+- fromkeys(): Creates a new dictionary with specified keys and a default value.
+
+
+# Iterating Over a Dictionary
+```Python
+    for key in my_dict:
+    print(key)  # Output: apple, carrot, orange
+
+for value in my_dict.values():
+    print(value)  # Output: a fruit with a crunchy texture, a root vegetable, a citrus fruit
+
+for key, value in my_dict.items():
+    print(key, "-", value)  # Output: apple - a fruit with a crunchy texture, carrot - a root vegetable, orange - a citrus fruit
+```
+
+## Dictionary Comprehension
+Just like how you can use list comprehension to create lists in a concise and efficient way, you can also use dictionary comprehension to create dictionaries. Dictionary comprehension allows you to create dictionaries based on an iterable while defining both the keys and their corresponding values in a single line of code. Here's how you can use dictionary comprehension in Python:
+
+```Python
+    # Example 1: Creating a dictionary of squares
+    squares_dict = {num: num ** 2 for num in range(1, 6)}
+    print(squares_dict)  # Output: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+    # You can also Filter
+    # Example 2: Creating a dictionary with even numbers as keys and their squares as values
+    even_squares_dict = {num: num ** 2 for num in range(1, 11) if num % 2 == 0}
+    print(even_squares_dict)  # Output: {2: 4, 4: 16, 6: 36, 8: 64, 10: 100}
+
+
+```
 
 # Set Data Structure
+In Python, a set is an unordered collection of unique elements. Sets are mutable, which means you can add or remove elements from them. Sets are represented by curly braces {} or by using the set() function.
+
+## Creating a Set
+```Python
+
+    fruits = {'apple', 'banana', 'orange'}
+    print(fruits)  # Output: {'orange', 'banana', 'apple'}
+
+    numbers = set([1, 2, 3, 4, 5])
+    print(numbers)  # Output: {1, 2, 3, 4, 5}
+```
+
+## Removing an Items
+```Python
+    fruits = {'apple', 'banana', 'orange'}
+    fruits.add('grape')
+    print(fruits)  # Output: {'orange', 'banana', 'grape', 'apple'}
+
+    fruits.remove('banana')
+    print(fruits)  # Output: {'orange', 'grape', 'apple'}
+
+    fruits.discard('kiwi')
+    print(fruits)  # Output: {'orange', 'grape', 'apple'}
+```
+
+## Set Operation
 
 
+# 
 
 
 
