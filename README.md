@@ -1,7 +1,7 @@
 # Python Notes
 Learn Python Programming Language from Basics to Advance.
 
-```        
+```      
 Note: This list should be learnt in this Order.
 ```
 
@@ -75,25 +75,22 @@ Data types are the different categories in which data can be stored, handle and 
 - String(str)
 - Integer(int)
 - Boolean(bool): Either True or False.
-
 - Float Point(float): Numbers with precisions. E.g 0.122, -2901.23.
-
-- Complex Number(complex): Imaginary numbers. E.g: (89 + 9j).
-
+- Complex Number(complex): Imaginary numbers. E.g: (89 + 9j)
 
 # Basic Data Structures
 These are forms in which 1 variable can hold more than 1 values.
 
-- List: 
+- List:
   - Used to hold sequence of values. 
   - It is ordered that is,  It stores it's element just the way they were entered in the list. 
   - It's elements can be changed.
 
-- Tuple: 
+- Tuple:
   - Used to hold sequence of unique values. 
-  - It is ordered that is,  It stores it's element just the way they were entered in the tuple.
+  - It is ordered that is,  It stores it's element just the way they were entered in the tuple
 
-- Set: 
+- Set:
   - Used to hold sequence of unique values. 
   - It is unordered that is,  It doesn't store it's element just the way they were entered in the set.
 
@@ -105,7 +102,6 @@ These are forms in which 1 variable can hold more than 1 values.
 - This is the automatic conversion of data to specific type usually to a type that is bigger.
 - The Python Interpreter handles Type conversions.
 Example: integer to float.
-
 
 # Type Casting
 - Conversion from float to integer.
@@ -176,7 +172,6 @@ Sequence of characters stored within a single, double or triple quotes. E.g:
 """ Python Programmer."""
 ```
 
-
 ## String Methods
 String Methods are used to perform extram action on a string.
 
@@ -214,14 +209,13 @@ Python provides several control flow structures that enable you to control the e
 ```Python
     # Note: Only the block that meets the condition will run.
     if condition1:
-        # code block executed if condition1 is true
+        # code block executed if condition1 is true.
     elif condition2:
-        # code block executed if condition2 is true
+        # code block executed if condition2 is true.
     else:
-        # code block executed if neither condition1 nor condition2 is true
-
+        # code block executed if neither condition1 nor condition2 is true.
 ```
-- Tenary (Short hand if statement): 
+- Tenary (Short hand if statement):
 ```Python
 variable = 'Statement to run if the condition is True' if  condition else 'Statement to run if condition is false'
 ```
@@ -243,7 +237,7 @@ Structure of for and while loops:
 
 ```Python
     try:
-    # code that might raise an exception
+        # code that might raise an exception
     except ExceptionType:
         # code executed if the specified exception occurs
     else:
@@ -251,7 +245,6 @@ Structure of for and while loops:
     finally:
         # code executed regardless of whether an exception occurs or not
 ```
-
 
 # Iterable and Iterator
 Iterables is an object that can be looped over.
@@ -438,7 +431,6 @@ Error:
     ValueError: too many values to unpack (expected 2)
 ```
 
-
 ## Unpacking and packing:
 If you want to unpack the first few elements of a list and don’t care about the other elements, you can:
 
@@ -503,7 +495,7 @@ The map(), filter() and reduce can be used on any Iterable object.
 ```
 
 # Tuple Data Structure.
- a tuple is an ordered, immutable collection of elements enclosed in parentheses ().
+A tuple is an ordered, immutable collection of elements enclosed in parentheses ().
 
 Creating a Tuple:
 To create a tuple, you can enclose elements within parentheses () and separate them with commas. Alternatively, you can create a tuple without using parentheses by simply separating the elements with commas.
@@ -529,7 +521,7 @@ To create a tuple, you can enclose elements within parentheses () and separate t
 ```Python
     my_tuple = 1, 2, 3  # Tuple packing: Packing all values to 1 variable name.
     a, b, c = my_tuple  # Tuple unpacking: Spreading values to different variable names.
-    print(a, b, c)     # Output: 1 2 3
+    print(a, b, c)      # Output: 1 2 3
 ```
 
 ## Tuple Operations
@@ -637,7 +629,6 @@ In Python, a set is an unordered collection of unique elements. Sets are mutable
 ```Python
     tags = {'Django', 'Pandas', 'Numpy'}
     lowercase_tags = {tag.lower() for tag in tags}
-
     print(lowercase_tags)
 ```
 
@@ -680,7 +671,8 @@ The union of two sets returns a new set that contains combination of the two set
 ```
 
 ### Advantage of the union() method over the (|) operator:
-- The union() method can take in other iterables and converts it to set. E.g: set1.union(set2)
+- The union() method can take in other iterables and converts it to set. 
+E.g: set1.union(set2)
 
 - The (|) operator only allows sets. E.g: set1 | set2 | set3.
 
@@ -706,6 +698,8 @@ set1 | list1 # Output: TypeError
 - 
 
 ## 
+
+
 
 
 
