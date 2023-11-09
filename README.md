@@ -11,6 +11,20 @@ Note: This list should be learnt in this Order.
 
 Python is a high-level, interpreted programming language that was created by Guido van Rossum and first released in 1991. It is known for its simplicity and readability, which makes it an excellent choice for beginners and experienced programmers alike. Python emphasizes code readability by using indentation and a clean syntax, which reduces the need for complex braces and semicolons.
 
+- we need to download a translation service, The Python Interpreter, from the official website. The translation service (Python interpreter is written in C) but it also has many forms like Jython (a python translation service built in java ).
+- The Cpython downloaded from python official  website comes with the interpreter and also Cpython VM.
+- when code is written in a python script (.py) and ran, it goes to the python interpreter, the interpreter converts it to byte code, then the bytes is passes it to cpython vm, which runs the code on our devices.
+- Why so many Languages ?: Different programming languages are good for building different tools.
+- Python strength is in Scripting. Every language has it's pros and cons.
+- Then bin() function is used to return the binary number for any number.
+- convert a binary back to base 10 using int('0b101', 2).
+- The whole point of writing a code is to make it readable.
+- An expression is a piece of code that produce a value.
+- A statement is an entire line of code.
+- python - print, math, data types (int, float)
+- operator precendence. (), **, *, ...
+
+
 ## Why python, What can python do ? 
 Python is a versatile programming language that can be used for a wide range of applications. Here are some of the things Python can do:
 
