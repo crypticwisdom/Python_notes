@@ -499,3 +499,8 @@ print(poly.private())
 #
 #
 # print(isinstance(f, object))
+dir()
+
+
+[].sort()
+sorted()

@@ -420,26 +420,29 @@ It's important to note that within an expression, operators with higher preceden
 ## Python List
 
 A list is a versatile and commonly used data structure that allows you to store and manipulate a collection of items. Lists are mutable, meaning you can add, remove, or modify elements within them.
+- Used to hold sequence of values.
+- It is ordered that is, It stores it's element just the way they were entered in the list.
+- It's elements can be changed.
 
-- Create a List:
+### Create a List:
 
 ```Python
    container1, container2 = [1,2], list(1,2)
 ```
 
-- Accessing List Elements:
+### Accessing List Elements:
 
 ```Python
     print(container1[0]) => 1
 ```
 
-- Modifying List Elements:
+### Modifying List Elements:
 
 ```Python
     container1[1] = 332
 ```
 
-- List Operations:
+### List Operations:
   - Concatenation (+): Adding 2 or more list objects together.
     ```Python
        a, b = [2,4,5], [43,65]
@@ -456,44 +459,38 @@ A list is a versatile and commonly used data structure that allows you to store 
        print(a[:2]) => [2, 4, 5]
     ```
 
-# List:
-
-- Used to hold sequence of values.
-- It is ordered that is, It stores it's element just the way they were entered in the list.
-- It's elements can be changed.
 
 ## List Methods:
+- .append(): Adds an element to the end of the list.
+- .extend(): Appends elements from an iterable to the end of the list.
+- .insert(index, item): Inserts an element at a specific index.
+- .remove(x): Removes the first occurrence of a specified element.
+- .pop(): Removes and returns the element at a specific index, or the last element if no index is specified.
+- .index(x): Returns the index of the first occurrence of a specified element.
+- .count(x): Returns the number of occurrences of a specified element in the list.
+- .sort(): Sorts the elements of the list in ascending order.-
+- .reverse(): Reverses the order of the elements in the list. a[::-1]
+- .copy(): Returns a shallow copy of the list.
+- .clear(): Removes all elements from the list.
 
-- append(): Adds an element to the end of the list.
-- extend(): Appends elements from an iterable to the end of the list.
-- insert(): Inserts an element at a specific index.
-- remove(): Removes the first occurrence of a specified element.
-- pop(): Removes and returns the element at a specific index, or the last element if no index is specified.
-- index(): Returns the index of the first occurrence of a specified element.
-- count(): Returns the number of occurrences of a specified element in the list.
-- sort(): Sorts the elements of the list in ascending order.-
-- reverse(): Reverses the order of the elements in the list. a[::-1]
-- copy(): Returns a shallow copy of the list.
-- clear(): Removes all elements from the list.
-
-To see a complete list of methods available for a any Python object, you can use the dir() function or access the Python documentation.
+To see the complete list of methods available for any Python object, you can use the dir() function or access the Python documentation.
 
 ### Sort a list in Place:
-
 The list.sort() method sorts the original list in place. It means that the sort() method modifies the order of elements in the list.
+The sorted() can also be used to sort the list but it will return a new list.
 
 ```Python
     data_set = [2, 3, 5, 4, 1]
-    data_set.list()
+    data_set.sort()
     print(data_set) => [1, 2, 3, 4, 5]
 
     data_set2 = [2, 4, 3, 1]
-    data_set2.list(reverse=True)
+    data_set2.sort(reverse=True)
     print(data_set2) => [4, 3, 2, 1]
 
 ```
 
-- By default, the sort() method sorts the elements of a list using the less-than operator (<). In other words, it places the lower elements before the higher ones.
+- By default, the '.sort()' method sorts the elements of a list using the less-than operator (<). In other words, it places the lower elements before the higher ones.
 - If a list contains strings, the sort() method sorts the string elements alphabetically.
 
 ```Python
@@ -512,7 +509,7 @@ The list.sort() method sorts the original list in place. It means that the sort(
 
 
     companies.sort(key=lambda container: container[2])
-    print(companies) => [('Apple', 2019, 260.2), ('Google', 2019, 134.81), ('Facebook', 2019, 70.7)]
+    print(companies) # => [('Apple', 2019, 260.2), ('Google', 2019, 134.81), ('Facebook', 2019, 70.7)]
 
 ```
 
@@ -523,7 +520,6 @@ The list.sort() method sorts the original list in place. It means that the sort(
 - To return the new sorted list from the original list, you use the sorted() function.
 
 ## Python slicing:
-
 Lists support the slice notation that allows you to get a sublist from a list:
 
 Syntax:
