@@ -8,7 +8,7 @@ Note: This list should be learnt in this Order.
 
 # Introduction to python.
 
-## What is python ?
+## What is Python ?
 
 Python is a high-level, interpreted programming language that was created by Guido van Rossum and first released in 1991. It is known for its simplicity and readability, which makes it an excellent choice for beginners and experienced programmers alike. Python emphasizes code readability by using indentation and a clean syntax, which reduces the need for complex braces and semicolons.
 
@@ -253,6 +253,7 @@ Imaginary numbers. E.g: (9j + 6).
 ```
 
 # Control Flow
+
 Control flow in Python refers to the order in which statements are executed in a program. It determines the flow or sequence of execution based on conditions and loops. Control flow allows you to control the path of execution and make decisions in your program based on certain criteria.
 
 Python provides several control flow structures that enable you to control the execution of statements:
@@ -333,7 +334,9 @@ name = "My name is W\"isdom \\ "
 - \\ --> \
 
 # String Slicing
+
 - Used for creating a sub-string from a string.
+
 ```python
 # syntax: [start:stop:stepover]
 name = 'Wisdom'
@@ -372,15 +375,19 @@ comments[0:4] # "I am" => index 4 is exclusive.
   - (==, <, >, <=, >=)
 
 - Identity Operators:
+
   - (is, is not)
 
 - Membership Operators:
+
   - (in, not in)
 
 - Bitwise Operators:
+
   - This haven't been studied.
 
 - Conditions and Chained Conditions:
+
   - Condition refers to a statement or an expression that evaluates to either true or false. This uses conditional operators, e.g >, < ...
 
   - Chained conditions, also known as compound conditions or multiple conditions, refer to using multiple conditions together to create more complex logic (condition) in programming. This uses 'and' or 'or' logical operators.
@@ -388,9 +395,10 @@ comments[0:4] # "I am" => index 4 is exclusive.
 ## Operator Precedence:
 
 Operator precedence in Python defines the order in which operators are evaluated when multiple operators are present in a single expression.
+
 - Parentheses: Expressions enclosed in parentheses (...expr...) have the highest precedence. They are evaluated first, and the result is used in further calculations.
 
-- Exponentiation: The exponentiation operator '**' has the next highest precedence. It is used to raise a number to a power.
+- Exponentiation: The exponentiation operator '\*\*' has the next highest precedence. It is used to raise a number to a power.
 
 - Unary Operators: Unary operators like positive + and negative - sign have the next highest precedence. They are applied to a single operand.
 
@@ -407,11 +415,12 @@ Operator precedence in Python defines the order in which operators are evaluated
 - Boolean Operators: Boolean operators and, or, and not have the lowest precedence among the logical operators.
 
 It's important to note that within an expression, operators with higher precedence are evaluated before operators with lower precedence. If operators have the same precedence, their evaluation order is determined by their position from left to right.
-
 <br>
-# <hr> Intermediate </hr>
+
+# Level 2: Intermediate
 
 ## Python List
+
 A list is a versatile and commonly used data structure that allows you to store and manipulate a collection of items. Lists are mutable, meaning you can add, remove, or modify elements within them.
 
 - Create a List:
