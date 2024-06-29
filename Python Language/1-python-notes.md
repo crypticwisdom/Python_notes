@@ -415,9 +415,9 @@ Operator precedence in Python defines the order in which operators are evaluated
 - Boolean Operators: Boolean operators and, or, and not have the lowest precedence among the logical operators.
 
 It's important to note that within an expression, operators with higher precedence are evaluated before operators with lower precedence. If operators have the same precedence, their evaluation order is determined by their position from left to right.
-<br>
 
-# Level 2: Intermediate
+
+# <hr> Level 2: Intermediate
 
 ## Python List
 
