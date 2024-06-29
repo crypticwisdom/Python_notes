@@ -1,7 +1,7 @@
 # Python Notes
-Learn Python Programming Language from Basics to Advance.
+Learn Python Programming Language from it's Basic to Advance Level.
 
-```      
+```
 Note: This list should be learnt in this Order.
 ```
 
@@ -12,15 +12,13 @@ Note: This list should be learnt in this Order.
 Python is a high-level, interpreted programming language that was created by Guido van Rossum and first released in 1991. It is known for its simplicity and readability, which makes it an excellent choice for beginners and experienced programmers alike. Python emphasizes code readability by using indentation and a clean syntax, which reduces the need for complex braces and semicolons.
 
 - we need to download a translation service, The Python Interpreter, from the official website. The translation service (Python interpreter is written in C) but it also has many forms like Jython (a python translation service built in java ).
-- The Cpython downloaded from python official  website comes with the interpreter and also Cpython VM.
-- when code is written in a python script (.py) and ran, it goes to the python interpreter, the interpreter converts it to byte code, then the bytes is passes it to cpython vm, which runs the code on our devices.
+- The C-Python downloaded from python official  website comes with the interpreter and also C-Python VM.
+- when code is written in a python script (.py) and ran, it goes to the python interpreter, the interpreter converts it to byte code, then passes the bytes to C-Python's VM (Virtual Machine), which runs the code on our devices.
 - Why so many Languages ?: Different programming languages are good for building different tools.
 - Python strength is in Scripting. Every language has it's pros and cons.
 - Then bin() function is used to return the binary number for any number.
 - convert a binary back to base 10 using int('0b101', 2).
 - The whole point of writing a code is to make it readable.
-- An expression is a piece of code that produce a value.
-- A statement is an entire line of code.
 - python - print, math, data types (int, float)
 - operator precendence. (), **, *, ...
 
@@ -61,6 +59,9 @@ Python keywords, also known as reserved words, are words that have special meani
 [False, class,  finally, is, return, None, continue, for, lambda, try, True, def, from, nonlocal, while, and, del, global, not, with
 as, elif, if, or, yield, assert, else, import, pass, break, except, in, raise]
 
+- An expression is a piece of code that produce a value.
+- A statement is an entire line of code.
+
 # Built-In Functions
 Python provides a set of built-in functions that are available by default without the need for importing any modules. These functions cover a wide range of functionalities and are an integral part of the Python language. Here are some commonly used built-in functions in Python:
 
@@ -74,6 +75,10 @@ Python provides a set of built-in functions that are available by default withou
 
 - Input: input() is used to read user input from the console.
 
+## Math Functions
+- round(x)
+- abs(x)
+learn more about math function python.
 
 # Data Types
 Data types are the different categories in which data can be stored, handle and manipulated in python. These data types are objects.
@@ -85,19 +90,19 @@ Data types are the different categories in which data can be stored, handle and 
 - Complex Number(complex): Imaginary numbers. E.g: (89 + 9j)
 - None type: The absence of value
 
-# Custom Types 
+## Custom Types 
 Classes to build our own Custom types in Python.
 
+```Python
+    class CustomType:
+        def __init__(self):
+            ...
 
-# Specialized Datatype
+```
+
+## Specialized Datatype
 Whenever we don't have a python built-in datatype, we can get these specialized datatypes
-from packages or modules.
-
-
-# Math Functions
-- round(x)
-- abs(x)
-learn more about math function python.
+from python packages or modules also from third packages or modules.
 
 
 # Operator Precedence
@@ -142,14 +147,6 @@ a, b, c = 1, 2, 3
 # Statement
 A statement is an entire line of code that is used to 
 
-# Augmented Assignment Operator
-```Python
-age = 1
-age += 1
-age -= 1
-age *= 1
-```
-
 # String Data Type
 Sequence of characters stored within a single, double or triple quotes. E.g: 
 ```Python
@@ -166,6 +163,25 @@ String Methods are used to perform extra action on a string.
 - .capitalize()
 ...
 
+# Integer Data Type
+- Whole numbers without precisions. E.g 1, -1, -344, 122322.
+
+## Integer Methods
+- isnumeric()
+-
+
+
+# Float Data Type
+Numbers with precisions. E.g 0.122, -2901.23.
+
+
+# Boolean Data Type
+Either True or False.
+
+
+# Complex Data Type
+Imaginary numbers. E.g: (9j + 6).
+
 
 # Type Conversion
 - This is the automatic conversion of data to specific type usually to a type that is bigger.
@@ -176,6 +192,71 @@ Example: integer to float.
 - Conversion from float to integer.
 - Manual type conversion in Python. That is, a conversion the programmer does by him/her self.
 - Mostly converting from bigger data type to smaller, but can be in any form.
+
+# Control Flow
+Control flow in Python refers to the order in which statements are executed in a program. It determines the flow or sequence of execution based on conditions and loops. Control flow allows you to control the path of execution and make decisions in your program based on certain criteria.
+
+Python provides several control flow structures that enable you to control the execution of statements:
+
+- Conditional Statements (if, elif, else):
+```Python
+    # Note: Only the block that meets the condition will run.
+    if condition1:
+        # code block executed if condition1 is true.
+    elif condition2:
+        # code block executed if condition2 is true.
+    else:
+        # code block executed if neither condition1 nor condition2 is true.
+```
+- Tenary (Short hand if statement):
+```Python
+variable = 'Statement to run if the condition is True' if  condition else 'Statement to run if condition is false'
+```
+
+- Loops (for, while): Loops allow you to repeatedly execute a block of code.
+
+Structure of for and while loops:
+```Python
+    for item in iterable:
+        # code block executed for each item in the iterable
+
+    while condition:
+        # code block executed as long as the condition is true
+```
+
+- Break and Continue: The 'break' statement is used to exit a loop prematurely, stopping the loop's execution. The 'continue' statement is used to skip the rest of the loop's code for the current iteration and move to the next iteration.
+
+- Exception Handling (try, except, else, finally): Exception handling allows you to handle errors or exceptions that may occur during the execution of your program. The 'try' block contains the code that might raise an exception, and the 'except' block handles the exception if it occurs. The 'finally' block is used to specify code that should always be executed, whether an exception occurs or not.
+
+```Python
+    try:
+        # code that might raise an exception
+    except ExceptionType:
+        # code executed if the specified exception occurs
+    else:
+        # code to be executed if there was no exception but if there was an error, this block won't run.
+    finally:
+        # code executed regardless of whether an exception occurs or not
+```
+
+## Loops
+```Python
+for i in range(x):
+    print(i)
+    if i == 3:
+        break 
+    else:
+        continue
+
+
+counter = 0
+while counter == 90:
+    if counter == 34:
+        break
+    else:
+        continue
+
+```
 
 # Escape Sequences
 ```python
@@ -205,7 +286,7 @@ print(name[0::-1]) # ==> modsiW
   - % -> It returns the remainder of a division.
 
 
-- Assignment Operator:
+- Augmented Assignment Operator:
   - (=, +=, -=, /=, //=, *=, **=, %=) New: (:= (Walrus Operator - used for assigning a value to a variable inside a statement))
  ```Python
     while (entered := input("Enter your name: ")) != "quit":
@@ -255,8 +336,8 @@ Parentheses: Expressions enclosed in parentheses ( ) have the highest precedence
 It's important to note that within an expression, operators with higher precedence are evaluated before operators with lower precedence. If operators have the same precedence, their evaluation order is determined by their position from left to right.
 
 
-
-# Python List
+# -- Intermediate
+## Python List
  a list is a versatile and commonly used data structure that allows you to store and manipulate a collection of items. Lists are mutable, meaning you can add, remove, or modify elements within them. 
 
 - Create a List:
@@ -645,77 +726,6 @@ print(set_1.difference(set_2)) # => {1,2,3,8}
 
 ## 
 
-
-
-
-
----------------------------------------------------------------
-
-# Integer Data Type
-- Whole numbers without precisions. E.g 1, -1, -344, 122322.
-
-## Integer Methods
-- 
-
-
-# Float Data Type
-Numbers with precisions. E.g 0.122, -2901.23.
-
-
-# Boolean Data Type
-Either True or False.
-
-
-# Complex Data Type
-Imaginary numbers. E.g: (9j + 6).
-
-
-# Control Flow
-Control flow in Python refers to the order in which statements are executed in a program. It determines the flow or sequence of execution based on conditions and loops. Control flow allows you to control the path of execution and make decisions in your program based on certain criteria.
-
-Python provides several control flow structures that enable you to control the execution of statements:
-
-- Conditional Statements (if, elif, else):
-```Python
-    # Note: Only the block that meets the condition will run.
-    if condition1:
-        # code block executed if condition1 is true.
-    elif condition2:
-        # code block executed if condition2 is true.
-    else:
-        # code block executed if neither condition1 nor condition2 is true.
-```
-- Tenary (Short hand if statement):
-```Python
-variable = 'Statement to run if the condition is True' if  condition else 'Statement to run if condition is false'
-```
-
-- Loops (for, while): Loops allow you to repeatedly execute a block of code.
-
-Structure of for and while loops:
-```Python
-    for item in iterable:
-        # code block executed for each item in the iterable
-
-    while condition:
-        # code block executed as long as the condition is true
-```
-
-- Break and Continue: The 'break' statement is used to exit a loop prematurely, stopping the loop's execution. The 'continue' statement is used to skip the rest of the loop's code for the current iteration and move to the next iteration.
-
-- Exception Handling (try, except, else, finally): Exception handling allows you to handle errors or exceptions that may occur during the execution of your program. The 'try' block contains the code that might raise an exception, and the 'except' block handles the exception if it occurs. The 'finally' block is used to specify code that should always be executed, whether an exception occurs or not.
-
-```Python
-    try:
-        # code that might raise an exception
-    except ExceptionType:
-        # code executed if the specified exception occurs
-    else:
-        # code to be executed if there was no exception but if there was an error, this block won't run.
-    finally:
-        # code executed regardless of whether an exception occurs or not
-```
-
 # Iterable and Iterator
 Iterables is an object that can be looped over.
 - list
@@ -730,23 +740,6 @@ Any object with __iter__() method, means that object can be looped over / is an 
 - Iterator: is an object with a state so that it remembers where it is during iteration, they know how to get their next value with the __next__() which is one of the magic methods of an Iterator | next() which is a built-in function that calls the '__next__()' method.
 
 - iter(iterable) -> returns an iterator object which we can then use the 'next()' to get the next element in the sequence, and once each element has been accessed, it is then lost or removed from the state. When the iterator is exhausted i.e when we have accessed all of it's element, and we try to access an element again from it, a 'StopIteration' Exception will be thrown
-
-## Loops
-for i in range(x):
-    print(i)
-    if i == 3:
-        break 
-    else:
-        continue
-
-
-counter = 0
-while counter == 90:
-    if counter == 34:
-        break
-    else:
-        continue
-
 
 # Functions and Lambda (Anonymous Function):
 A function is used to group a block of code.
