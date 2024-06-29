@@ -416,10 +416,10 @@ Operator precedence in Python defines the order in which operators are evaluated
 
 It's important to note that within an expression, operators with higher precedence are evaluated before operators with lower precedence. If operators have the same precedence, their evaluation order is determined by their position from left to right.
 
-
 ## Python List
 
 A list is a versatile and commonly used data structure that allows you to store and manipulate a collection of items. Lists are mutable, meaning you can add, remove, or modify elements within them.
+
 - Used to hold sequence of values.
 - It is ordered that is, It stores it's element just the way they were entered in the list.
 - It's elements can be changed.
@@ -443,24 +443,25 @@ A list is a versatile and commonly used data structure that allows you to store 
 ```
 
 ### List Operations:
-  - Concatenation (+): Adding 2 or more list objects together.
-    ```Python
-       a, b = [2,4,5], [43,65]
-       print(a + b) => [2,4,5,43,65]
-    ```
-  - Repition (\*): Repeat a list a certain number of times.
-    ```Python
-       a = [2,4,5]
-       print(a * 3) => [2, 4, 5, 2, 4, 5, 2, 4, 5]
-    ```
-  - Slicing (:): Use slicing to extract a portion of a list. It allows you to specify a range of indices to retrieve a sublist.
-    ```Python
-       a = [2, 4, 5, 3]
-       print(a[:2]) => [2, 4, 5]
-    ```
 
+- Concatenation (+): Adding 2 or more list objects together.
+  ```Python
+     a, b = [2,4,5], [43,65]
+     print(a + b) => [2,4,5,43,65]
+  ```
+- Repition (\*): Repeat a list a certain number of times.
+  ```Python
+     a = [2,4,5]
+     print(a * 3) => [2, 4, 5, 2, 4, 5, 2, 4, 5]
+  ```
+- Slicing (:): Use slicing to extract a portion of a list. It allows you to specify a range of indices to retrieve a sublist.
+  ```Python
+     a = [2, 4, 5, 3]
+     print(a[:2]) => [2, 4, 5]
+  ```
 
 ## List Methods:
+
 - .append(): Adds an element to the end of the list.
 - .extend(): Appends elements from an iterable to the end of the list.
 - .insert(index, item): Inserts an element at a specific index.
@@ -476,6 +477,7 @@ A list is a versatile and commonly used data structure that allows you to store 
 To see the complete list of methods available for any Python object, you can use the dir() function or access the Python documentation.
 
 ### Sort a list in Place:
+
 The list.sort() method sorts the original list in place. It means that the sort() method modifies the order of elements in the list.
 The sorted() can also be used to sort the list but it will return a new list.
 
@@ -520,6 +522,7 @@ The sorted() can also be used to sort the list but it will return a new list.
 - To return the new sorted list from the original list, you use the sorted() function.
 
 ## Python slicing:
+
 Lists support the slice notation that allows you to get a sublist from a list:
 
 Syntax:
@@ -542,7 +545,7 @@ Basically, you can assign elements of a list (and also a tuple) to multiple vari
 
 This statement assigns the first, second, and third elements of the colors list to the red, blue, and green variables.
 
-**An error occurs when the number of variable is less than the element in the sequence on the right hand side**
+**An error occurs when the number of variable is less than the element in the sequence on the right hand side.**
 
 ```Python
     colors = ['red', 'blue', 'green']
@@ -582,14 +585,14 @@ If you want to unpack the first few elements of a list and don’t care about th
     # Result: ['red']
 ```
 
-# Dictionary:
+## Dictionary Data Structure
+
+A Python dictionary is a powerful data structure that allows you to store and retrieve data using key-value pairs.
+
+### Dictionary:
 
 - Used to hold key-value pairs.
 - It is unordered.
-
-# Dictionary Data Structure
-
-A Python dictionary is a powerful data structure that allows you to store and retrieve data using key-value pairs.
 
 ## Creating a Dictionary
 
@@ -655,8 +658,6 @@ Just like how you can use list comprehension to create lists in a concise and ef
     # Example 2: Creating a dictionary with even numbers as keys and their squares as values
     even_squares_dict = {num: num ** 2 for num in range(1, 11) if num % 2 == 0}
     print(even_squares_dict)  # Output: {2: 4, 4: 16, 6: 36, 8: 64, 10: 100}
-
-
 ```
 
 # Tuple Data Structure.
@@ -664,11 +665,9 @@ Just like how you can use list comprehension to create lists in a concise and ef
 A tuple is an ordered, immutable collection of elements enclosed in parentheses ().
 
 - Tuple:
-  - Used to hold sequence of unique values.
-  - It is ordered that is, It stores its element just the way they were entered in the tuple
-  - once a tuple is created you can't make changes to it.
+  - It is ordered that is, It stores its element just the way they were entered in the tuple.
+  - Once a tuple is created you can't make changes to it.
   - It is faster than a LIST data type.
-  -
 
 Creating a Tuple:
 To create a tuple, you can enclose elements within parentheses () and separate them with commas. Alternatively, you can create a tuple without using parentheses by simply separating the elements with commas.
@@ -728,8 +727,7 @@ Tuples have a few built-in methods available:
 
 # Set Data Structure
 
-In Python, a set is an unordered collection of unique elements. Sets are mutable, which means you can add or remove
-elements from them. Sets are represented by curly braces {} or by using the set() function.
+In Python, a set is an unordered collection of unique elements. Sets are mutable, which means you can add or remove elements from them. Sets are represented by curly braces {} or by using the set() function.
 
 - Set:
   - Used to hold sequence of unique values.
