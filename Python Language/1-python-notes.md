@@ -417,8 +417,6 @@ Operator precedence in Python defines the order in which operators are evaluated
 It's important to note that within an expression, operators with higher precedence are evaluated before operators with lower precedence. If operators have the same precedence, their evaluation order is determined by their position from left to right.
 
 
-# <hr> Level 2: Intermediate
-
 ## Python List
 
 A list is a versatile and commonly used data structure that allows you to store and manipulate a collection of items. Lists are mutable, meaning you can add, remove, or modify elements within them.
