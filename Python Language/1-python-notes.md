@@ -185,7 +185,7 @@ A statement is a complete line of code that performs some action. Statements are
     print(i)
 ```
 
-- import
+- import statement:
 
 ```python
     import math
