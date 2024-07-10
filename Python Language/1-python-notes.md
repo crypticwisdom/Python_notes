@@ -781,10 +781,10 @@ The union of two sets returns a new set that contains combination of the two set
     s2 = {'Dart', 'Javascript', 'Java'}
     s3 = {'Golang', 'Rust', 'Haskell', 'R', 'C#'}
 
-    s = set1.union(s2, s3)
+    s = s1.union(s2, s3)
     print(s) # Output: {'Python', 'Swift', 'Java', 'Dart', 'Javascript', 'Golang', 'Rust', 'Haskell', 'R', 'C#'}
 
-- The union() method accepts one or more iterables while the set union operator (|) only accepts sets.
+# The union() method accepts one or more iterables while the set union operator (|) only accepts sets.
 ```
 
 ```Python
@@ -841,7 +841,7 @@ print(set_1.difference(set_2)) # => {1,2,3,8}
 
 # Iterable and Iterator
 
-Iterables is an object that can be looped over.
+Iterable is an object that can be looped over.
 
 - list
 - tuple
@@ -850,12 +850,19 @@ Iterables is an object that can be looped over.
 - files
 - generators
 
-Any object with **iter**() method, means that object can be looped over / is an iterable.
+Any object with **__iter__**() method, means that object can be looped over / is an iterable.
 
 - Iterator: is an object with a state so that it remembers where it is during iteration, they know how to get their next value with the **next**() which is one of the magic methods of an Iterator | next() which is a built-in function that calls the '**next**()' method.
 
 - iter(iterable) -> returns an iterator object which we can then use the 'next()' to get the next element in the sequence, and once each element has been accessed, it is then lost or removed from the state. When the iterator is exhausted i.e when we have accessed all of it's element, and we try to access an element again from it, a 'StopIteration' Exception will be thrown
 
+```PYTHON
+    # Iterable
+    container = [1,2,3,4,5]
+    iterator = iter(container)
+
+
+```
 # Functions and Lambda (Anonymous Function):
 
 A function is used to group a block of code.
