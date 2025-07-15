@@ -92,7 +92,7 @@ Data types are the different categories in which data can be stored, handle and 
 - Boolean(bool): Either True or False.
 - Float Point(float): Numbers with precisions. E.g 0.122, -2901.23.
 - Complex Number(complex): Imaginary numbers. E.g: (89 + 9j)
-- None type: The absence of value
+- None: The absence of value
 
 ## Custom Types
 
@@ -156,8 +156,8 @@ a, b, c = 1, 2, 3
 # Expression
 
 - An expression is a piece of code that performs some form of action.
-  Expression
-  An expression is any combination of variables, constants, operators, and functions that can be evaluated to produce a value. Expressions are used to perform computations and return results. They are a key building block in programming because they represent values and computations.
+
+An expression is any combination of variables, constants, operators, and functions that can be evaluated to produce a value. Expressions are used to perform computations and return results. They are a key building block in programming because they represent values and computations.
 
 Examples of expressions in Python:
 
@@ -205,7 +205,7 @@ Sequence of characters stored within a single, double or triple quotes. E.g:
 
 ### String Methods
 
-String Methods are used to perform extra action on a string.
+String Methods are used to perform extra actions on a string.
 
 - .lower() -> "String".lower() => 'string".
 - .upper()
@@ -214,7 +214,7 @@ String Methods are used to perform extra action on a string.
 
 ## Integer Data Type
 
-- Whole numbers without precisions. E.g 1, -1, -344, 122322.
+- Whole numbers without precision. E.g 1, -1, -344, 122322.
 
 ### Integer Methods
 
@@ -223,7 +223,7 @@ String Methods are used to perform extra action on a string.
 
 ## Float Data Type
 
-Numbers with precisions. E.g 0.122, -2901.23.
+Numbers with precision. E.g 0.122, -2901.23.
 
 ## Boolean Data Type
 
@@ -235,7 +235,7 @@ Imaginary numbers. E.g: (9j + 6).
 
 # Type Conversion
 
-- This is the automatic conversion of data to specific type usually to a type that is bigger.
+- This is the automatic conversion of data to a specific type, usually to a type that is bigger.
 - The Python Interpreter handles Type conversions.
   Example: integer to float.
 
@@ -243,7 +243,7 @@ Imaginary numbers. E.g: (9j + 6).
 
 - Conversion from float to integer.
 - Manual type conversion in Python. That is, a conversion the programmer does by him/her self.
-- Mostly converting from bigger data type to smaller, but can be in any form.
+- Mostly converting from a bigger data type to smaller, but can be in any form.
 
 ```python
     print(3 * 2.0) # output: 6.0 (Python interpreter performed a type conversion here.)
@@ -254,11 +254,15 @@ Imaginary numbers. E.g: (9j + 6).
 
 # Control Flow
 
-Control flow in Python refers to the order in which statements are executed in a program. It determines the flow or sequence of execution based on conditions and loops. Control flow allows you to control the path of execution and make decisions in your program based on certain criteria.
+Control Flow refers to the order in which instructions in a program are executed.
+Python executes code top to bottom, but you can change the flow using (control flow statements):
+- Conditional statements (if, elif, else)
+- Loop statement (for, while)
+- Control statements (break, continue, pass, return)
+- Exception statement: (try ... except ... else ... finally)
 
-Python provides several control flow structures that enable you to control the execution of statements:
 
-- Conditional Statements (if, elif, else):
+## Conditional Statements (if, elif, else):
 
 ```Python
     # Note: Only the block that meets the condition will run.
@@ -268,15 +272,14 @@ Python provides several control flow structures that enable you to control the e
         # code block executed if condition2 is true.
     else:
         # code block executed if neither condition1 nor condition2 is true.
-```
 
 - Tenary (Short hand if statement):
 
-```Python
 variable = 'Statement to run if the condition is True' if  condition else 'Statement to run if condition is false'
+
 ```
 
-- Loops (for, while): Loops allow you to repeatedly execute a block of code.
+## Loops Statements/Iteration (for, while): Loops allow you to repeatedly execute a block of code.
 
 Structure of for-loop and while loops:
 
@@ -288,9 +291,16 @@ Structure of for-loop and while loops:
         # code block executed as long as the condition is true
 ```
 
+## Control Statement:
+
 - Break and Continue: The 'break' statement is used to exit a loop prematurely, stopping the loop's execution. The 'continue' statement is used to skip the rest of the loop's code for the current iteration and move to the next iteration.
 
-- Exception Handling (try, except, else, finally): Exception handling allows you to handle errors or exceptions that may occur during the execution of your program. The 'try' block contains the code that might raise an exception, and the 'except' block handles the exception if it occurs. The 'finally' block is used to specify code that should always be executed, whether an exception occurs or not. The else block is used to perform code if no exception was caught
+
+## Exception Handling:
+- Used to handle runtime errors and avoid crashes.
+
+try, except, finally, else, raise
+🧠 Controls the program execution flow when errors happen.
 
 ```Python
     try:
@@ -298,12 +308,15 @@ Structure of for-loop and while loops:
     except ExceptionType:
         # code executed if the specified exception occurs
     else:
-        # code to be executed if there was no exception but if there was an error, this block won't run.
+        # code to be executed if there was no exception, but if there was an error, this block won't run.
     finally:
         # code executed regardless of whether an exception occurs or not
 ```
+---
 
-## Loops
+
+
+# Loops
 
 ```Python
 for i in range(x):
@@ -334,41 +347,40 @@ name = "My name is W\"isdom \\ "
 - \\ --> \
 
 # String Slicing
-
-- Used for creating a sub-string from a string.
+- Used for creating a substring from a string.
 
 ```python
-# syntax: [start:stop:stepover]
-name = 'Wisdom'
-print(name[0::-1]) # ==> modsiW
-comments = "I am good"
-comments[0:4] # "I am" => index 4 is exclusive.
+    # syntax: [start:stop:stepover]
+    name = 'Wisdom'
+    print(name[0::-1]) # ==> modsiW
+    comments = "I am good"
+    comments[0:4] # "I am" => index 4 is exclusive.
 ```
 
 # Immutability
+- Strings are immutable; that is, we cannot change the value of an item in a string.
 
-- Strings are immutable, that is, we cannot change the value of an item in a string.
 
-# Operators
+# Operators:
 
-- Arithmetics Operators:
+- Arithmetic Operators:
 
   - (+, -, /, \*, %, \*\*, //)
-  - // -> It returns the number of times a number divides the certain number.
+  - // -> It returns the number of times a number divides a certain number.
   - % -> It returns the remainder of a division.
 
 - Augmented Assignment Operators:
   - (=, +=, -=, /=, //=, \*=, \*\*=, %=) New: (:= (Walrus Operator - used for assigning a value to a variable inside a statement))
 
 ```Python
-    # walrus: new in python.
+    # walrus: new in Python.
    while (entered := input("Enter your name: ")) != "quit":
        print(entered)
 ```
 
 - Logical Operators:
 
-  - (and, or)
+  - (and, or, not)
 
 - Comparison Operators:
 
@@ -386,9 +398,9 @@ comments[0:4] # "I am" => index 4 is exclusive.
 
   - This haven't been studied.
 
-- Conditions and Chained Conditions:
+## Conditions and Chained Conditions:
 
-  - Condition refers to a statement or an expression that evaluates to either true or false. This uses conditional operators, e.g >, < ...
+  - Condition refers to a statement or an expression that evaluates to either true or false. This uses conditional operators, e.g, >, < ...
 
   - Chained conditions, also known as compound conditions or multiple conditions, refer to using multiple conditions together to create more complex logic (condition) in programming. This uses 'and' or 'or' logical operators.
 
@@ -416,13 +428,15 @@ Operator precedence in Python defines the order in which operators are evaluated
 
 It's important to note that within an expression, operators with higher precedence are evaluated before operators with lower precedence. If operators have the same precedence, their evaluation order is determined by their position from left to right.
 
+# Data Structure:
+
 ## Python List
 
 A list is a versatile and commonly used data structure that allows you to store and manipulate a collection of items. Lists are mutable, meaning you can add, remove, or modify elements within them.
 
 - Used to hold sequence of values.
-- It is ordered that is, It stores it's element just the way they were entered in the list.
-- It's elements can be changed.
+- It is ordered that is, it stores it's element just the way they were entered in the list.
+- Its elements can be changed.
 
 ### Create a List:
 
@@ -518,7 +532,7 @@ The sorted() can also be used to sort the list but it will return a new list.
 ## Python sorted() built-in function
 
 - The Python sorted() function is used to sort iterables.
-- This works same as the .sort() method, but the sorted() built-in function returns a new list object.
+- This works the same as the .sort() method, but the sorted() built-in function returns a new list object.
 - To return the new sorted list from the original list, you use the sorted() function.
 
 ## Python slicing:
@@ -666,11 +680,11 @@ A tuple is an ordered, immutable collection of elements enclosed in parentheses 
 
 - Tuple:
   - It is ordered that is, It stores its element just the way they were entered in the tuple.
-  - Once a tuple is created you can't make changes to it.
+  - Once a tuple is created, you can't make changes to it.
   - It is faster than a LIST data type.
 
 Creating a Tuple:
-To create a tuple, you can enclose elements within parentheses () and separate them with commas. Alternatively, you can create a tuple without using parentheses by simply separating the elements with commas.
+- To create a tuple, you can enclose elements within parentheses () and separate them with commas. Alternatively, you can create a tuple without using parentheses by simply separating the elements with commas.
 
 ```Python
     # Method 1
@@ -678,7 +692,6 @@ To create a tuple, you can enclose elements within parentheses () and separate t
 
     # Method 2
     my_tuple = 1, 2, 3
-
 ```
 
 ## Accessing Tuple
@@ -692,7 +705,7 @@ To create a tuple, you can enclose elements within parentheses () and separate t
 
 ```Python
     my_tuple = 1, 2, 3, 4, 5, 6  # Tuple packing: Packing all values to 1 variable name.
-    a, b, c, *variable= my_tuple  # Tuple unpacking: Spreading values to different variable names.
+    a, b, c, *variable = my_tuple  # Tuple unpacking: Spreading values to different variable names.
     print(a, b, c, variable)      # Output: 1 2 3, (4, 5, 6 )
 ```
 
@@ -837,11 +850,12 @@ print(set_1.difference(set_2)) # => {1,2,3,8}
 
 -
 
-##
+---
 
-# Iterable and Iterator
-
+# Iterable and Iterator: 
 Iterable is an object that can be looped over.
+
+An iterable is any object in Python that can return its elements one at a time, allowing it to be looped over using a for loop or other iteration tools.
 
 - list
 - tuple
@@ -850,19 +864,35 @@ Iterable is an object that can be looped over.
 - files
 - generators
 
-Any object with **__iter__**() method, means that object can be looped over / is an iterable.
+To be an iterable, an object must implement the __iter__() method (and return an iterator).
+
+```python
+    class MyList:
+    def __init__(self, data):
+        self.data = data
+
+    def __iter__(self):
+        return iter(self.data)
+
+    obj = MyList([1, 2, 3])
+    for item in obj:
+        print(item)
+
+
+# Here, MyList is iterable because it implements __iter__().
+```
 
 - Iterator: is an object with a state so that it remembers where it is during iteration, they know how to get their next value with the **next**() which is one of the magic methods of an Iterator | next() which is a built-in function that calls the '**next**()' method.
 
-- iter(iterable) -> returns an iterator object which we can then use the 'next()' to get the next element in the sequence, and once each element has been accessed, it is then lost or removed from the state. When the iterator is exhausted i.e when we have accessed all of it's element, and we try to access an element again from it, a 'StopIteration' Exception will be thrown
+- iter(iterable) -> returns an iterator object which we can then use the 'next()' to get the next element in the sequence, and once each element has been accessed, it is then lost or removed from the state. When the iterator is exhausted i.e, when we have accessed all of its elements, and we try to access an element again from it, a 'StopIteration' Exception will be thrown
 
 ```PYTHON
     # Iterable
     container = [1,2,3,4,5]
     iterator = iter(container)
-
-
 ```
+
+
 # Functions and Lambda (Anonymous Function):
 
 A function is used to group a block of code.
@@ -903,7 +933,7 @@ Syntax:
 
 The map(), filter() and reduce can be used on any Iterable object.
 
-- map(function, iterable): This is used to perform a function on every item of an iterable passed to it, it/to return a new iterator object An object that has the ''''**next**()''' method. Works on all python iterable.
+- map(function, iterable): This is used to perform a function on every item of an iterable passed to it, it/to return a new iterator object An object that has the ''''**next**()''' method. Works on all Python iterables.
 
 ```Python
    container = [2, 3, 4]
@@ -914,18 +944,18 @@ The map(), filter() and reduce can be used on any Iterable object.
    print(list(calculation_response)) => # [4, 9, 16]
 ```
 
-- filter(function, iterable) built-in function -> Use the Python filter(fn, iterable) function to filter an Iterable. The function "fn()" is ran on every element on the iterable and returns 'True' where any element meets the condition. A new iterator object is returned after using filter object.
+- filter(function, iterable) built-in function -> Use the Python filter(fn, iterable) function to filter an Iterable. The function "fn()" is run on every element of the iterable and returns 'True' where any element meets the condition. A new iterator object is returned after using the filter object.
 
 ```Python
    container = [2, 3, 4]
-   calculation_response = filter(lambda x: x**2 == 16, container)
+   calculation_response = filter(lambda x: x**2 > 3, container)
    # The above statement yeilds an iterator object "<filter object at 0x10bf88670>".
 
    # Convert the iterator to a list
    print(list(calculation_response)) => # [4]
 ```
 
-- reduce(function, iterable): This is not a built-in function instead it is import from the standard python library. It is used to reduce an iterable to a single value. Example:
+- reduce(function, iterable): This is not a built-in function instead, it is imported from the standard Python library. It is used to reduce an iterable to a single value. Example:
 
 ```Python
     from functools import reduce
@@ -941,7 +971,10 @@ The map(), filter() and reduce can be used on any Iterable object.
 # General Information
 
 ### Garbage Collection:
-
-When the del keyword is used to delete an object, the interpreter simply, unbinds the object from the variable or removes the variable name from the corresponding namespace. The object however continues to exist in memory and if no other variable name is bound to it, it is later automatically destroyed.
-This automatic destruction of unreferenced objects in python is called garbage collection.
 Garbage collection is the destruction of unreferenced objects in python.
+
+When the del keyword is used to delete an object, the interpreter simply unbinds the object from the variable or removes the variable name from the corresponding namespace. The object however continues to exist in memory and if no other variable name is bound to it, it is later automatically destroyed.
+
+This automatic destruction of unreferenced objects in Python is called garbage collection.
+
+
